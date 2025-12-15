@@ -1,0 +1,73 @@
+
+/* Tots els elements "*" */
+* {
+    margin: 0;
+
+}
+html {
+    font-size: 18px;
+}
+/* Dins el <body> */
+body {
+    color:blue;
+    background-color: bisque;
+    text-align:center;
+}
+/* Dins el <header> */
+header {
+    background-color: #212121;
+}
+
+
+/* per aplicar açò --> <p id="container"></p> */
+#container {
+    color:black
+}
+/* <p class="paragraf"> */
+.paragraf {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1, h2, .paragraf {
+    font-size: 1rem;/* 16px, 1 rem = 1 vegada tamany especificat a html*/
+}
+/* S'aplica a les <p> dins divs */
+div p {
+    color: green;
+}
+/* Als <p> amb class="paragraf" */
+p.paragraf {
+    text-align: left;
+}
+/* Als <span> dins una etiqueta amb class="paragraf" */
+.paragraf span {
+        text-decoration: underline;
+        color: #D7263D
+}
+
+
+/* Tots els elements dins el div */
+div * {
+
+}
+
+section {
+    color:hsla(0, 100%, 50%, 0.8)
+}
+
+button {
+    padding: 10px;
+    background-color: #0197F6;
+    border-color: red;
+    border-radius: 10px;
+    font-size: 0,8rem;
+    font-style:italic;
+}
+
+button:hover {
+    background-color: #0197F6;
+    opacity: 0.8;
+    cursor: pointer;
+    border-radius: 100px;
+    font-weight: bold;
+}

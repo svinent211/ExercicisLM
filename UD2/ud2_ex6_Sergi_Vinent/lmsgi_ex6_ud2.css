@@ -1,0 +1,74 @@
+:root {
+    --color-lila:#6d597a; 
+    --color-rosa: #b56576;
+    --color-groc:#eaac8b;
+    --color-white: #fff;
+    --color-negre: #000;
+    
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: var(--color-lila);
+    color: var(--color-white);
+    text-align: center;
+    padding: 10px 0;
+}
+main {
+    position: relative;
+}
+main aside {
+    background-color: var(--color-rosa);
+    position:absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 20vw;
+    min-width: 144px;
+    height: 100vh;
+    padding: 1rem;
+    
+}
+main aside ul  li {
+    list-style-type: none;
+    padding-bottom: 10px;
+    
+}
+main aside ul li a {
+    text-decoration: none;
+    color: var(--color-negre);
+    /* padding: 16px 0 16px 16px; */
+}
+main section {
+    position: absolute;
+    left: calc(20vw + 60vw - 15vw); /* Posar a la dreta del aside + dur al centre - padding de .card*/
+    transform: translateX(-50%);
+    padding: 1rem;
+    top: 50vh;
+    
+    width: 80vw;
+    /* background-color: var(--color-negre); */
+}
+.card {
+    background-color: var(--color-groc);
+    padding: 5vh 15vw 5vh 15vw;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    display: inline-block;
+}
+
+footer {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+

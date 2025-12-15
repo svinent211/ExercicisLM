@@ -1,0 +1,117 @@
+* {
+    margin: 10px 1px;
+}
+
+/* Combinadors */
+/* 1. Descendents */
+/* Tots, encara que hi hagui un article entremig */
+section p {
+    color:blue;
+}
+/* 2. Fills directes */
+section > p {
+    color:green;
+}
+
+/* 3. Germans adjacents */
+/* Paragrafs just a continuacio d'un h2 */
+h2 + p {
+    font-weight: bold;
+}
+
+/* 4. Qualsevol germà */
+
+h2 ~ p {
+    text-decoration: underline;
+}
+
+/* Pseudoclasses */
+
+p:hover {
+    /* Modifica quan pases per damunt de cosa */
+    color:red;
+}
+
+:checked {
+    /* Modifica quan clickas una opcio o un checkbox */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    color:blue ;/*Canvia el color del text a vermell dins input*/
+    background-color: blueviolet;
+}
+
+::placeholder {
+    color: green;
+
+
+
+
+
+}
+a[target="_blank"] {
+    color: gold;
+}
+
+/* form label {
+    font-size:20px;
+} */
+form label:first-child {
+    color:violet;
+}
+
+form label:nth-child(2) {
+    color:red;
+}
+
+/* input[name^="input"]{
+    font-size:20px;
+} */
+
+input[type="checkbox"]{
+    margin:10px 20px;
+}
+
+
+/* Tipus block */
+form, section, h1{
+    /* background-color: aquamarine; */
+}
+
+/* inline */
+form {
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+}
+
+input {
+    background-color: yellow;
+    height: 20px;
+    width: 300px;
+    display:block;
+}
+
+label {
+    background-color: aqua;
+    display: block;
+    
+}
+
+
+
+
+section:nth-of-type(2) {
+    height: 300px;
+    background-color: darkgrey;
+
+}
+
+/* USAR
+
+- outline: none; Borde para inputs
+- border-radius: ; Redondear bordes
+- 

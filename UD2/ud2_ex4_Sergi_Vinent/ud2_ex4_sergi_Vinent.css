@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;}
+
+
+body {
+    background-color: #1e2019;
+    text-align: center;
+    font-family: sans-serif;
+}
+header {
+    background-color: #d3d0cb;
+    padding: 10px;
+}
+
+header img {
+    display:block;
+    margin:auto;
+    height: 150px;
+}
+
+header a {
+    text-decoration: none;
+    color: #1e2019;
+    padding: 0 15px;
+    
+
+}
+
+
+a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main h1 {
+    color: #d3d0cb;
+    padding: 10px 0;
+}
+
+form {
+    border: 3px solid #d3d0cb;
+    border-radius: 15px;
+    width: 50%;
+    min-width: 500px;
+    margin: auto;
+    color: #d3d0cb;
+}
+label + input {
+    
+    margin: 15px 0;
+}
+
+input {
+    width: 200px;
+}
+input[type="radio"] {
+    width: auto;
+}
+input[type="submit"] {
+    background-color: #E2C044;
+    padding: 10px 0;
+    margin: 10px 0;
+    width: 80px;
+    border-radius: 5px;
+    border-color: #d3d0cb;
+}
+input[type="checkbox"] {
+    width: auto;
+}
+textarea {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 450px;
+}
+input:focus, textarea:focus {
+    outline: none;
+    border: 2px solid #E2C044;
+    box-shadow: 0 0 5px #E2C044;
+    
+}
+
+form a {
+    text-decoration: underline;
+    color: #d3d0cb;
+}
+
+input:checked {
+    accent-color: #587b7f;
+}
+
+h3 {
+    padding-top: 15px;
+}

@@ -1,0 +1,90 @@
+:root {
+    --verd: #9bc1bc;
+    --verd-clar: #e6ebe0;
+    --groc: #f4f1bb;
+    --taronja: #ed6a5a;
+    --blau: #5c77a9;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.sticky-menu, .footer {
+    background-color: var(--verd);
+}
+
+/*
+    Position
+    - static (Predeterminat)
+    - relative
+    - absolute
+    - fixed
+    - sticky
+    - initial
+    - inherit
+
+    Propietats relacionades.
+    - top, bottom, left, right
+    - z-index
+*/
+
+h1 {
+    position: relative;
+    left: 50px;
+    /* top: 50px; */
+    width: calc(100% - 50px);
+    background-color: var(--taronja);
+    height: 100px;
+}
+
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    z-index: 900;
+}
+
+.pare {
+    background-color: var(--groc);
+    height: 200px;
+    width: 70%;
+    margin: 0 auto;
+    position: relative ;
+}
+
+.pare div {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+}
+.pare div:first-child {
+    background-color: var(--blau);
+    left: 60px;
+    top: 40px;
+    z-index: 1000;
+    /* position: fixed;
+    bottom: 150px;
+    right: 80px; */
+}
+
+.pare div:last-child {
+    background-color: var(--taronja);
+    left: 80px;
+    top: 20px;
+}
+
+.large {
+    height: 1000px;
+    background-color: var(--verd-clar);
+    width: 70%;
+    margin: 10px auto;
+    margin-bottom: 70px;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer div, .sticky-menu div {
+    display: inline-block;
+    padding: 20px;
+}

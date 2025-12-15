@@ -1,0 +1,149 @@
+:root {
+    --color-lightorange: #ff8800;
+    --color-orange: #db7603;
+}
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 0;
+    padding: 0;
+     /* border: 1px solid red; */
+}
+
+header {
+    position: relative;
+    /* height: 13vh; */
+    margin-bottom: 15px;
+    
+}
+.menu div {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.menu div input {
+    display: inline-block;
+}
+img[alt="logo"] {
+    height: 8vh;
+    display: block;
+    margin: auto;
+}
+header nav div ul {
+    text-align: center;
+    width: calc( 100vw - 1.5rem);
+}
+ul {
+    list-style-type: none;
+    
+}
+header nav ul li {
+    display: inline-block;
+    padding-top: 10px;
+    padding-left: 10px;
+
+}
+a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+
+main {
+    position: relative;
+    height: 80vh;
+}
+main div aside {
+    position: absolute;
+    left: 0;
+    width: 15vw;
+}
+/* Arreglar lista del aside */
+/* Esto hace el espacio de arriba de "What's new" y "Shop by product" */
+.list-group {
+    margin-top: 1rem;
+}
+
+/* Añadir espacio para identar la lista */
+aside nav ul {
+    padding-left: 1.5rem;
+}
+aside nav ul strong > li {
+    padding-top: 10px;
+}
+
+
+main div section {
+    position: absolute;
+    left: 15vw;
+    padding-left: 1rem;
+}
+/* Esto es de: ORDER BY FILTER*/
+#products-filter {
+    background-color: lightgrey;
+    width: calc(100vw - 15vw - 2rem);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+#products-filter div {
+    padding-top:1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+#products-filter div a {
+    font-size: 1.25rem;
+    padding-left: 10px ;
+    
+}
+
+/* Productos */
+article {
+    display: inline-block;
+}
+.image-container img {
+    height: 60vh;
+}
+
+/* Top button */
+a[href="#all-products"] {
+    position: fixed;
+    right: 3vw;
+    bottom: 17vh;
+    
+}
+button {
+    padding: 10px;
+    background-color: var(--color-lightorange);
+    border-radius: 10px;
+    border-color: transparent;
+    cursor: pointer;
+}
+/* Load more */
+#load-more-products {
+    position: absolute;
+    bottom: 0;
+    left: 50%
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    background-color: lightgray;
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+footer ul, footer div{
+    text-align: center;
+    position:relative;
+}
+footer ul li {
+    display: inline-block;
+}
+@media (min-width: 1024px) {
+    /* Solo pasa esto si la anchura de la pantalla supera los 1024px */
+
+}

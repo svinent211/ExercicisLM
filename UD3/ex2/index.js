@@ -1,10 +1,20 @@
-const btnMenu = document.getElementById("btn-menu")
-const navMenu = document.getElementById("nav-menu")
-const btnClose = document.getElementById("btn-close")
-const front = document.querySelector(".front")
-const back = document.querySelector(".back")
-btnMenu.addEventListener("click", () => {
-    front.classList.add("display-flex")
-    back.classList.add("display")
+const btnMenu = document.querySelector("#btn-menu");
+const btnClose = document.querySelector("#btn-close");
+const navMenu = document.querySelector("#nav-menu");
+const btnFeatures = document.querySelector("#btn-features");
+const ulFeatures = document.querySelector(".ul-features");
 
+// Abrir menu hamburguesa
+btnMenu.addEventListener("click", ()=>{
+    navMenu.classList.add("display-block");
+    
+} );
+// Cerrar menu hamburguesa
+btnClose.addEventListener("click", ()=>{
+    navMenu.classList.remove("display-block");
+});
+
+// Abrir o cerrar apartado "Features" en menu hamburguesa
+btnFeatures.addEventListener("click", ()=>{
+    ulFeatures.classList.toggle("display-flex");
 });

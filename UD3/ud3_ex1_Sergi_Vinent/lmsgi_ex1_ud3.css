@@ -16,6 +16,9 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    background-color: var(--color-white);
+    font-family: Arial, sans-serif;
+    color: var(--color-negre);
 }
 
 header, footer {
@@ -57,7 +60,7 @@ a {
 }
 
 section {
-    width: 85%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content:center ;
@@ -67,6 +70,7 @@ section {
 }
 .card {
     width: 48%;
+    /* width: calc(50% - 10px); */
     height: 100px;
     background-color: var(--color-groc);
     display: flex;

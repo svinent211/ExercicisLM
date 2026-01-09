@@ -93,6 +93,11 @@ header nav {
     border-radius: 10px;
     padding: 10px;
 }
+    /* Flechas del menu */
+[alt="arrow-up"] {
+    display: none;
+}
+    /* Elements del submenu */
 
 
 
@@ -108,7 +113,12 @@ img[id="btn-close"] {
 .display-flex{
     display: flex;
     flex-direction: column;
-    
+}
+.display-inline {
+    display: inline;
+}
+.display-none {
+    display: none;
 }
 
 

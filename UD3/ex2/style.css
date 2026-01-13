@@ -27,6 +27,7 @@ header {
     align-items: center;
     padding: 15px;
     width: 100%;
+    height: 75px;
 
 }
 header li, nav, header div, header ul {
@@ -43,6 +44,7 @@ header nav {
     inset: 0;
     width: 100%;
 }
+
 .front {
     display: flex;
     flex-direction: column;
@@ -59,6 +61,10 @@ header nav {
     flex-direction: column;
     gap: 15px 0;
     
+}
+/* Separacio de "Features" amb X en el menu */
+.front > ul {
+    padding-top: 30px; 
 }
 .back {
     background-color: rgba(0,0,0,0.6);
@@ -82,6 +88,13 @@ header nav {
     color: var(--color-gray);
     font-size: 1.2rem;
     background-color: transparent;
+}
+    /* On hover bold menu buttons */
+.front button:hover, .front > ul > li:nth-of-type(3):hover, .front > ul > li:last-child:hover {
+    color: var(--color-black);
+}
+button,  .front > ul > li:nth-of-type(3):hover, .front > ul > li:last-child:hover {
+    cursor: pointer;
 }
     /* Espais entre elements llista gran */
 .front > ul {
@@ -165,7 +178,7 @@ main section p {
     text-align: center;
 }
 
-section div:first-of-type {
+main section div {
     display: flex;
     flex-direction: row;
     gap: 0 15px;
@@ -173,16 +186,22 @@ section div:first-of-type {
     align-items: center;
     width: 20%;
 }
-section div:first-of-type img {
+section div img {
     width: 70px;
 }
 
 .btn-learn {
-    padding: 10px;
+    padding: 15px 30px;
     background-color: var(--color-black);
     color: var(--color-white);
     font-weight: bold;
-    border-radius: 10px;
+    font-size: 1rem;
+    border-radius: 15px;
+}
+.btn-learn:hover {
+    background-color: var(--color-white);
+    color: var(--color-black);
+
 }
 
 
@@ -192,9 +211,79 @@ section div:first-of-type img {
 
 
 @media (min-width: 700px) {
-    main {
-    flex-direction: row-reverse;
+    
+    header nav {
+        display: flex;
+        position: relative;
+        padding-left: 50px; /* Alejar menu del logo */
     }
-    main img {
+    #btn-menu, #btn-close {
+        display: none;
+    }
+    .btn-container{
+        display: block;
+        padding: 0;
+        
+    }
+    .front {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        height: auto;
+        width: 100%;
+    }
+
+    .front > ul {
+        flex-direction: row;
+        gap: 0 40px;
+        padding: 0;
+        align-items: center;
+    }
+   
+    .ul-submenu {
+        /* Moure submenus a posició*/
+        position: absolute;
+        top: 50px;
+        left: 20px;
+
+        background-color: #FFFFFF;
+        padding: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+    }
+    .ul-company {
+        left: 220px; /*Moure submenu Company a posició*/
+    }
+
+    /* main*/
+        /* Centrar main*/
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: row-reverse;
+        width: 80%;
+    }
+    main section {
+        /* padding-top: 150px; */
+        padding-top: 20%;
+        justify-content: space-between;
+        align-items: start;
+        gap: 20px 0;
+    }
+    main section h2 {
+        font-size: 4.2rem;
+    }
+    main section p {
+        text-align: start;
+        line-height: 1.5;
+    }
+    main section div {
+        align-self: center;
+        justify-content: space-between;
+        width: 100%;
     }
 }

@@ -1,0 +1,189 @@
+/* Variables de color */
+:root {
+  --color-bg: #e7e7dd;
+  --color-primary: #629677;
+  --color-secondary: #D496A7;
+  --color-accent: #995D81;
+  --color-black: #000;
+  --color-white: #FFF;
+}
+
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-black);
+}
+
+h3 {
+  font-size: 32px;
+}
+
+button {    
+  padding: 0.5em 1em;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+  align-self: center;
+  width: 100px;
+  border-radius: 1em;
+  background-color: var(--color-bg);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  border-radius: 0.5em;
+}
+
+button.btn-primary:hover {
+  background-color: var(--color-accent);
+}
+
+.set-buttons {
+  padding: 10px 0;
+}
+
+.btn-open, .btn-pending, .btn-closed {
+  border-style: solid;
+  border-width: 0.6px;
+}
+
+.btn-all {
+  background-color: var(--color-secondary);
+}
+
+.btn-open {
+  border-color: var(--color-accent);
+}
+.btn-open:hover {
+  background-color: var(--color-accent);
+}
+
+.btn-pending{
+  border-color: var(--color-primary);
+}
+.btn-pending:hover{
+  background-color: var(--color-primary);
+}
+
+.btn-closed {
+  border-color: var(--color-black);
+}
+.btn-closed:hover {
+  background-color: var(--color-black);
+  color: var(--color-bg);
+}
+
+.circle {
+  background-color: var(--color-accent);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.pending {
+  background-color: var(--color-primary);
+}
+
+.closed {
+  background-color: var(--color-black);
+}
+
+td{
+  padding: 0.5em;
+}
+
+
+/*Main*/
+
+main {
+  padding: 2em;
+  background-color: var(--color-bg);
+  align-content: center;
+}
+
+section.cards {
+  display: grid;
+  grid-template-columns: 33% auto auto; /* Si es posen tots auto es primer es massa petit i si pos tots 33% surt del main */
+  grid-template-rows: repeat(8, auto);
+  gap: 20px 0;
+  grid-template-areas: 
+  "total total total"
+  "current current current"
+  "active active active"
+  "support support support"
+  "card6 card6 card6"
+  "graph graph graph"
+  "card8 card8 card8"
+  "card9 card9 card9";
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:first-child{
+  background-color: var(--color-primary);
+  grid-area: total;
+}
+
+.card:nth-child(2){
+  background-color: var(--color-secondary);
+  grid-area: current;
+}
+
+.card:nth-child(3){
+  background-color: var(--color-accent);
+  grid-area: active;
+}
+.card:nth-child(4){
+  grid-area: support;
+}
+.card:nth-child(5){
+  grid-area: card6;
+}
+.card:nth-child(6){
+  grid-area: graph;
+}
+.card:nth-child(7){
+  grid-area: card8;
+}
+.card:nth-child(8){
+  grid-area: card9;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+img[alt="art"]{
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  
+  section.cards {
+    grid-template-rows: repeat(4, auto);
+    gap: 20px 20px;
+    grid-template-areas: 
+    "total current active"
+    "support support card6"
+    "graph card8 card8"
+    "card9 card9 card9";
+  }
+  
+
+}

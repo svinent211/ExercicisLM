@@ -110,7 +110,7 @@ main {
 
 section.cards {
   display: grid;
-  grid-template-columns: 33% auto auto; /* Si es posen tots auto es primer es massa petit i si pos tots 33% surt del main */
+  grid-template-columns: repeat(3, auto); 
   grid-template-rows: repeat(8, auto);
   gap: 20px 0;
   grid-template-areas: 

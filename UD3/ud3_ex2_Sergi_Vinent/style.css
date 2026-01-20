@@ -133,8 +133,8 @@ button,  .front > ul > li:nth-of-type(3):hover, .front > ul > li:last-child:hove
 img[id="btn-close"] {
     align-self: flex-end;
     padding: 10px 10px 0 0;
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
 }
 .display-block {
     display: block ;

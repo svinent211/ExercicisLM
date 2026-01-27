@@ -155,15 +155,14 @@ img[alt="art"]{
 
   }
    section.cards .card{
-    width: 33%;
+    flex-basis: 33%;
   }
 
   section.cards .card.large {
-    width: 66%;
+    flex-basis: 66%;
   }
   section.cards .card.extralarge {
-    width: 66%;
-    width: 100%;
+    flex-basis: 100%;
   }
   
 

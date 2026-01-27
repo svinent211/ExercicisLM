@@ -42,7 +42,7 @@ body > .bg-image:first-of-type {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    height: 500px;
+    height: 600px;
     gap: 25px;
 }
 body > .bg-image:first-of-type > section {
@@ -53,6 +53,11 @@ body > .bg-image:first-of-type > section {
     text-align: center;
     text-transform: uppercase;
     font-size: larger;
+}
+body > .bg-image:first-of-type > section img {
+    height: 175px;
+    width: 50px;
+    align-self: center;
 }
 body > .bg-image:first-of-type > div {
     display: flex;
@@ -65,8 +70,42 @@ body > .bg-image:first-of-type > div {
     display:none;
 }
 .bg-image > div > nav.nav-visible { /* Afegit tot açò per donar prioritat a la clase */
-    display: block;
+    display: flex;
 }
+
+#nav-menu {
+    position: absolute;
+    top: 15vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 350px;
+    flex-direction: column;
+    padding: 30px 0;
+    justify-content: space-around;
+    background-color: var(--color-white);
+    gap: 1.25em 0;
+}
+#nav-menu button {
+    font-family: Barlow ;
+    border: none;
+    background-color: transparent;
+    font-size: 1.4rem;
+    color: var(--color-dark-gray-blue);
+    font-weight: bold;
+    
+}
+#nav-menu .contact-btn {
+    background-color: var(--color-yellow);
+    border-radius: 30px;
+    width: 150px;
+    align-self: center;
+    padding: 20px;
+    font-family: Fraunces ;
+    color: var(--color-);
+    font-variant-caps: all-petite-caps;
+}
+
 
 
 /* MAIN */
@@ -148,7 +187,7 @@ img{
 }
 .testimonials img {
     border-radius: 100%;
-    height: 50px;
+    height: 75px;
 }
 .author {
     font-weight: bold;
@@ -208,4 +247,59 @@ footer > div:nth-of-type(2) {
     justify-content: center;
     gap: 0 50px;
  }
+ .footer-logo {
+    background-image: url(./images/logo.svg);
+    background-size: 100% 100%;
+    height: 75px;
+    width: 125px;
+    align-self: center;
+}
 
+@media (width > 1140px) {
+    #nav-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 0 50px;
+        padding: 0;
+        position: static;
+        inset: 0;
+        transform: translateX(0);
+        height: auto;
+        width: auto;
+        background-color: transparent;
+    }
+    
+    #nav-menu button {
+        font-family: Barlow ;
+        border: none;
+        background-color: transparent;
+        font-size: 1.4rem;
+        color: var(--color-white);
+    }
+    #nav-menu .contact-btn {
+        background-color: var(--color-white);
+        border-radius: 30px;
+        width: 150px;
+        padding: 20px;
+        font-family: Fraunces ;
+        color: var(--color-);
+    }
+    #mobile-menu-btn {
+       display: none;
+    }
+    body > .bg-image:first-of-type {
+    background-image: url(./images/desktop/image-header.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: space-between;
+    gap: 0;
+    }
+    body > .bg-image:first-of-type > div {
+    display: flex;
+    flex-direction: row;
+    padding: 30px 15px;
+
+    }
+}

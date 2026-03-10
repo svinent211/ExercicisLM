@@ -2,10 +2,10 @@
 <!DOCTYPE factura SYSTEM "4.1.dtd">
 <factura>
     <capcalera id="A1">
-        <data dia="9" mes="3" any="2026"></data>
+        <data dia="9" mes="3" any="2026"/>
         <!-- No ha fet falta posar nom_comercial perque és opcional-->
-        <client nom_fiscal="IES Joan Ramis i Ramis"  NIF="09363693J"></client>
-        <proveidor nom_fiscal="Planeta" nom_comercial="Planeta" NIF="70602583P"></proveidor>
+        <client nom_fiscal="IES Joan Ramis i Ramis"  NIF="X09363693"/>
+        <proveidor nom_fiscal="Planeta" nom_comercial="Planeta" NIF="X70602583"/>
     </capcalera>
     <linea article_ref="L1" id_linea="B1">
         <article id_article="L1" tipus_iva="21">

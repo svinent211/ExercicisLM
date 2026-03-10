@@ -6,11 +6,11 @@
         <!ATTLIST data dia CDATA #REQUIRED
                        mes CDATA #REQUIRED
                        any CDATA #REQUIRED>
-    <!ELEMENT client (#PCDATA)>
+    <!ELEMENT client EMPTY>
         <!ATTLIST client nom_fiscal CDATA #REQUIRED
                          nom_comercial CDATA #IMPLIED
                          NIF CDATA #REQUIRED>
-    <!ELEMENT proveidor (#PCDATA)>
+    <!ELEMENT proveidor EMPTY>
         <!ATTLIST proveidor nom_fiscal CDATA #REQUIRED
                             nom_comercial CDATA #IMPLIED
                             NIF CDATA #REQUIRED>
@@ -29,7 +29,7 @@
 
 <!ELEMENT resum_total (subtotal_4, subtotal_10, subtotal_21, total_sense_iva, total_amb_iva)>
     <!ELEMENT subtotal_4 (#PCDATA)>
-    <!ELEMENT subtotal_10 (#PCDATA)>
+    <!ELEMENT subtotal_10 (#PCDATA)> 
     <!ELEMENT subtotal_21 (#PCDATA)>
     <!ELEMENT total_sense_iva (#PCDATA)>
     <!ELEMENT total_amb_iva (#PCDATA)>

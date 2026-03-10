@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistat SYSTEM "UD4ex3_4.dtd">
+
+<llistat>
+    <futur preu="">
+        <producte_anterior lloc="Madrid"></producte_anterior>
+        <producte></producte>
+        <!-- Opcional -->
+         <mercat></mercat>
+    </futur>
+    <divisa preu="" estable="no">
+        <nom></nom>
+        <producte_anterior lloc="Madrid"></producte_anterior>
+        <canvi>
+            <nom_moneda></nom_moneda>
+            <tipus_canvi></tipus_canvi>
+        </canvi>       
+    </divisa>
+    <bo preu="" estable="si">
+        <producte_anterior lloc="Madrid"/>
+        <pais_de_procedencia>Espanya</pais_de_procedencia>
+        <valor_desitjat></valor_desitjat>
+        <valor_minim></valor_minim>
+        <valor_maxim></valor_maxim>
+    </bo>
+    <lletra preu="" pais_emissor="Espanya">
+        <producte_anterior lloc="Madrid"></producte_anterior>
+        <tipus_interes>3</tipus_interes>
+    </lletra>
+</llistat>

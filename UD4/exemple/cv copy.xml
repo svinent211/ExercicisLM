@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE cv [
+    <!ELEMENT cv (nom, llinatges, any_de_naixement, residencia, dades_de_contacte, descripcio_general, competencies)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT llinatges (#PCDATA)>
+    <!ELEMENT any_de_naixement (#PCDATA)>
+    <!ELEMENT residencia (ciutat, pais)>
+    <!ELEMENT ciutat (#PCDATA)>
+    <!ELEMENT pais (#PCDATA)>
+    <!ELEMENT dades_de_contacte (telefon, email, linkedin)>
+    <!ELEMENT telefon (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT linkedin (#PCDATA)>
+    <!ELEMENT descripcio_general (#PCDATA)>
+    <!ELEMENT competencies (competencia+)>
+    <!ELEMENT competencia EMPTY>
+    <!ATTLIST competencia nom CDATA #REQUIRED
+                            nivell  CDATA #REQUIRED>
+    
+
+    ]>
+<cv>
+    <nom>Sergi</nom>
+    <llinatges>Vinent Sintes</llinatges>
+    <any_de_naixement>2007</any_de_naixement>
+    <residencia>
+        <ciutat>Alaior</ciutat>
+        <pais>España</pais>
+    </residencia>
+    <!-- <residencia ciutat="Alaior" pais="España"/> -->
+    <!-- <residencia ciutat="Alaior" pais="España"></residencia> -->
+    <dades_de_contacte>
+        <telefon>888776655</telefon>
+        <email>svinent21176@iesjoanramis.org</email>
+        <linkedin>Sergi</linkedin>
+    </dades_de_contacte>
+    <descripcio_general>Dispuest a aprendre, </descripcio_general>
+    <competencies>
+        <competencia nom="Angles" nivell="qlt"></competencia>
+        <competencia nom="Treball en equip" nivell="mitja"></competencia>
+
+    </competencies>
+    <!-- <formacio>
+        <titulacio nom="Grau Mitja electricitat">
+            <centre>Pasqual</centre>
+            <any>2025</any>
+        </titulacio>
+    </formacio>
+    <experiencies_professional>   
+        <experiencia>
+            <lloc_de_feina>Peó electricista</lloc_de_feina>
+            <empresa>PB</empresa>
+            <any_inici>2025</any_inici>
+            <any_final>2025</any_final>
+        </experiencia>
+    </experiencies_professional> -->
+</cv>

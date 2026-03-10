@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE factura SYSTEM "4.1.dtd">
+<factura>
+    <capcalera id="A1">
+        <data dia="9" mes="3" any="2026"></data>
+        <!-- No ha fet falta posar nom_comercial perque és opcional-->
+        <client nom_fiscal="IES Joan Ramis i Ramis"  NIF="09363693J"></client>
+        <proveidor nom_fiscal="Planeta" nom_comercial="Planeta" NIF="70602583P"></proveidor>
+    </capcalera>
+    <linea article_ref="L1" id_linea="B1">
+        <article id_article="L1" tipus_iva="21">
+            <descripcio_producte>Don Quijote de la Mancha</descripcio_producte>
+            <preu_sense_iva>20</preu_sense_iva>
+            <preu_amb_iva>24,2</preu_amb_iva>
+        </article>
+        <unitats>10</unitats>
+        <import_total>242</import_total>
+    </linea>
+    <linea article_ref="L2" id_linea="B2">
+        <article id_article="L2" tipus_iva="21">
+            <descripcio_producte>El secret del meu turbant</descripcio_producte>
+            <preu_sense_iva>15</preu_sense_iva>
+            <preu_amb_iva>18,15</preu_amb_iva>
+        </article>
+        <unitats>20</unitats>
+        <import_total>363</import_total>
+    </linea>
+    <resum_total>
+        <subtotal_4>0</subtotal_4>
+        <subtotal_10>0</subtotal_10>
+        <subtotal_21></subtotal_21>
+        <total_sense_iva>500</total_sense_iva>
+        <total_amb_iva>605</total_amb_iva>
+    </resum_total>
+</factura>

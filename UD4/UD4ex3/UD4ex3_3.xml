@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE comanda SYSTEM "UD4ex3_3.dtd">
+
+<comanda>
+    <llibre titol=""/>
+    <quadern num_fulles="20"/>
+    <quadern/>
+    <llapis>
+        <numero>2</numero>
+    </llapis>
+</comanda>

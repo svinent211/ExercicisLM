@@ -1,0 +1,10 @@
+<!ELEMENT comanda (llibre | quadern | llapis)+>
+
+<!ELEMENT llibre EMPTY>
+<!ATTLIST llibre titol CDATA #REQUIRED>
+
+<!ELEMENT quadern EMPTY>
+<!ATTLIST quadern num_fulles CDATA #IMPLIED>
+
+<!ELEMENT llapis (numero)>
+<!ELEMENT numero (#PCDATA)>

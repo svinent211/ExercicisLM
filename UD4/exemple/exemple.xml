@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animals>
+    <animal>
+        <nom>Tauró blanc </nom>
+        <nomcientific>Carcharodon carcharias </nomcientific>
+        <familia>Lamidae</familia>
+        <estatdeconservacio>Vulnerable</estatdeconservacio>
+    </animal>
+    <animal>
+        <nom>Tauró blanc </nom>
+        <nomcientific>Carcharodon carcharias </nomcientific>
+        <familia>Lamidae</familia>
+        <estatdeconservacio>Vulnerable</estatdeconservacio>
+    </animal>
+</animals>
+<curriculumvitae>

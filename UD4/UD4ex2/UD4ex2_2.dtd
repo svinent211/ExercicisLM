@@ -1,0 +1,14 @@
+<!ELEMENT comanda (tractor+)>
+<!ELEMENT tractor (component+)>
+<!ELEMENT component (data_entrega, pes, numero_serie, km_maxim?)>
+<!ATTLIST component nom_fabricant CDATA #REQUIRED
+                fragil (si | no) #REQUIRED>
+<!ELEMENT data_entrega (dia?, mes, any)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT any (#PCDATA)>
+
+<!ELEMENT pes (#PCDATA)>
+<!ATTLIST pes unitat (quilos | grams) #REQUIRED>
+<!ELEMENT numero_serie (#PCDATA)>
+<!ELEMENT km_maxim (#PCDATA)>

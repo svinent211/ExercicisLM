@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!DOCTYPE comanda [
+    <!ELEMENT comanda (tractor+)>
+    <!ELEMENT tractor (component+)>
+    <!ELEMENT component (data_entrega, pes, numero_serie, km_maxim)>
+    <!ATTLIST component nom_fabricant CDATA #REQUIRED
+                        fragil CDATA #REQUIRED>
+    <!ELEMENT data_entrega (dia?, mes, any)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT any (#PCDATA)>
+
+    <!ELEMENT pes (#PCDATA)>
+    <!ATTLIST pes unitat CDATA #REQUIRED>
+    <!ELEMENT numero_serie (#PCDATA)>
+    <!ELEMENT km_maxim (#PCDATA)>
+
+]>
+
+<comanda>
+    <tractor>
+        <component nom_fabricant="" fragil="">
+            <data_entrega>
+                <dia></dia>
+                <mes></mes>
+                <any></any>
+            </data_entrega>
+            <pes unitat=""></pes>
+            <numero_serie></numero_serie>
+            <!-- No apareix "km_maxim" -->
+        </component>
+    </tractor>
+    <!-- Hi ha més d'1 tractor -->
+    <tractor>
+        <component nom_fabricant="" fragil="">
+            <data_entrega>
+                <!-- No fa falta posar "dia" -->
+                <mes></mes>
+                <any></any>
+            </data_entrega>
+            <pes unitat=""></pes>
+            <numero_serie></numero_serie>
+            <km_maxim></km_maxim>
+        </component>
+        <component nom_fabricant="" fragil="">
+            <data_entrega>
+                <dia></dia>
+                <mes></mes>
+                <any></any>
+            </data_entrega>
+            <pes unitat=""></pes>
+            <numero_serie></numero_serie>
+            <km_maxim></km_maxim>
+        </component>
+    </tractor>
+    
+</comanda>

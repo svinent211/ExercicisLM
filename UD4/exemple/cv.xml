@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cv>
+    <nom>Sergi</nom>
+    <llinatges>Vinent Sintes</llinatges>
+    <any_de_naixement>2007</any_de_naixement>
+    <residencia>
+        <ciutat>Alaior</ciutat>
+        <pais>España</pais>
+    </residencia>
+    <!-- <residencia ciutat="Alaior" pais="España"/> -->
+    <!-- <residencia ciutat="Alaior" pais="España"></residencia> -->
+    <dades_de_contacte>
+        <telefon>888776655</telefon>
+        <email>svinent21176@iesjoanramis.org</email>
+        <linkedin>Sergi</linkedin>
+    </dades_de_contacte>
+    <descripcio_general>Dispuest a aprendre, </descripcio_general>
+    <competencies>
+        <competencia nom="Angles" nivel="Alt"></competencia>
+        <competencia nom="Treball en equip" nivel=""></competencia>
+
+    </competencies>
+    <formacio>
+        <titulacio nom="Grau Mitja electricitat">
+            <centre>Pasqual</centre>
+            <any>2025</any>
+        </titulacio>
+    </formacio>
+    <experiencies_professional>   
+        <experiencia>
+            <lloc_de_feina>Peó electricista</lloc_de_feina>
+            <empresa>PB</empresa>
+            <any_inici>2025</any_inici>
+            <any_final>2025</any_final>
+        </experiencia>
+    </experiencies_professional>
+</cv>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE comanda SYSTEM "UD4ex2_2.dtd">
+<!-- <!DOCTYPE comanda [
+    <!ELEMENT comanda (tractor+)>
+    <!ELEMENT tractor (component+)>
+    <!ELEMENT component (data_entrega, pes, numero_serie, km_maxim?)>
+    <!ATTLIST component nom_fabricant CDATA #REQUIRED
+                        fragil (si | no) #REQUIRED>
+    <!ELEMENT data_entrega (dia?, mes, any)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT any (#PCDATA)>
+
+    <!ELEMENT pes (#PCDATA)>
+    <!ATTLIST pes unitat (quilos | grams) #REQUIRED>
+    <!ELEMENT numero_serie (#PCDATA)>
+    <!ELEMENT km_maxim (#PCDATA)>
+
+]> -->
+<comanda>
+    <tractor>
+        <component nom_fabricant="Bosch" fragil="si">
+            <data_entrega>
+                <!-- opcional --> <dia>1</dia> 
+                <mes>3</mes>
+                <any>2020</any>
+            </data_entrega>
+            <pes unitat="quilos">10</pes>
+            <numero_serie>1234</numero_serie>
+            <km_maxim>90</km_maxim>
+        </component>
+    </tractor>
+    
+    
+    
+</comanda>

@@ -1,0 +1,14 @@
+<!ELEMENT operacions (venda | compra)+>
+<!ATTLIST venda llibres_venuts CDATA #REQUIRED>
+<!ELEMENT venda (titol+, lliurat?, import)>
+<!ELEMENT import (#PCDATA)>
+<!ELEMENT titol (#PCDATA)>
+<!ELEMENT lliurat EMPTY>
+<!ATTLIST import moneda CDATA #REQUIRED>
+
+<!ELEMENT compra (titol+, proveidor, data_compra)>
+<!ELEMENT proveidor (#PCDATA)>
+<!ELEMENT data_compra (dia, mes, any)>
+<!ELEMENT dia (#PCDATA)>
+<!ELEMENT mes (#PCDATA)>
+<!ELEMENT any (#PCDATA)>

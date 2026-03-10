@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE operacions SYSTEM "UD4ex2_1.dtd">
+<!-- DTD 
+<!DOCTYPE operacions [
+    <!ELEMENT operacions (venda | compra)+>
+    <!ATTLIST venda llibres_venuts CDATA #REQUIRED>
+    <!ELEMENT venda (titol+, lliurat?, import)>
+    <!ELEMENT import (#PCDATA)>
+    <!ELEMENT titol (#PCDATA)>
+    <!ELEMENT lliurat EMPTY>
+    <!ATTLIST import moneda CDATA #REQUIRED>
+    <!ELEMENT compra (titol+, proveidor, data_compra)>
+    <!ELEMENT proveidor (#PCDATA)>
+    <!ELEMENT data_compra (dia, mes, any)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT any (#PCDATA)>
+]> -->
+
+<!-- XML -->
+<operacions>
+    <venda llibres_venuts="50">
+        <titol>El Cid</titol>
+        <titol>El lazarillo de Tormes</titol>
+        <lliurat/> <!-- Opcional -->
+        <import moneda="euros">522</import>
+    </venda>
+    
+    <venda llibres_venuts="20">
+        <titol>El Cid</titol>
+        <import moneda="euros">522</import>
+    </venda>
+    
+
+    <compra>
+        <titol>El Quijote</titol>
+        <proveidor>Nom proveidor</proveidor>
+        <data_compra>
+            <dia>02</dia>
+            <mes>3</mes>
+            <any>2024</any>
+        </data_compra>
+    </compra>
+</operacions>

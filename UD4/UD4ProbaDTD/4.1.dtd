@@ -1,0 +1,35 @@
+<!ELEMENT factura (capcalera, linea+, resum_total)>
+
+<!ELEMENT capcalera (data, client, proveidor)>
+<!ATTLIST capcalera id NMTOKEN #REQUIRED>
+    <!ELEMENT data EMPTY>
+        <!ATTLIST data dia CDATA #REQUIRED
+                       mes CDATA #REQUIRED
+                       any CDATA #REQUIRED>
+    <!ELEMENT client (#PCDATA)>
+        <!ATTLIST client nom_fiscal CDATA #REQUIRED
+                         nom_comercial CDATA #IMPLIED
+                         NIF CDATA #REQUIRED>
+    <!ELEMENT proveidor (#PCDATA)>
+        <!ATTLIST proveidor nom_fiscal CDATA #REQUIRED
+                            nom_comercial CDATA #IMPLIED
+                            NIF CDATA #REQUIRED>
+
+<!ELEMENT linea (article, unitats, import_total)>
+    <!ATTLIST linea article_ref IDREF #REQUIRED
+                    id_linea NMTOKEN #REQUIRED>
+    <!ELEMENT article (descripcio_producte, preu_sense_iva, preu_amb_iva)>
+        <!ATTLIST article id_article ID #REQUIRED
+                          tipus_iva (4|10|21) #REQUIRED>
+    <!ELEMENT descripcio_producte (#PCDATA)>
+    <!ELEMENT preu_sense_iva (#PCDATA)>
+    <!ELEMENT preu_amb_iva (#PCDATA)>
+    <!ELEMENT unitats (#PCDATA)>
+    <!ELEMENT import_total (#PCDATA)>
+
+<!ELEMENT resum_total (subtotal_4, subtotal_10, subtotal_21, total_sense_iva, total_amb_iva)>
+    <!ELEMENT subtotal_4 (#PCDATA)>
+    <!ELEMENT subtotal_10 (#PCDATA)>
+    <!ELEMENT subtotal_21 (#PCDATA)>
+    <!ELEMENT total_sense_iva (#PCDATA)>
+    <!ELEMENT total_amb_iva (#PCDATA)>

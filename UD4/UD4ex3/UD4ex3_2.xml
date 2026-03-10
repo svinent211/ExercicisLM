@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE llistacursos SYSTEM "UD4ex3_2.dtd">
+<llistacursos>
+    <professors>
+        <professor NRP="ir">
+            <nom>Irene</nom>
+            <cognom1>Vinent</cognom1>
+            <!-- Opcional -->
+            <cognom2>Mercadal</cognom2>
+        </professor>
+        <professor NRP="mi">
+            <nom>Miquel</nom>
+            <cognom1>Petrus</cognom1>
+        </professor>
+    </professors>
+    <assignatures>
+        <assignatura codi_assignatura="lm" NRP="ir">
+            <nom>LM</nom>
+        </assignatura>
+        <assignatura codi_assignatura="ed" NRP="mi">
+            <nom>ED</nom>
+        </assignatura>
+    </assignatures>
+    <cursos>
+        <curs any_academic="2025">
+            <alumne>
+                <dni>40000000Q</dni>
+                <nom>Sergi</nom>
+                <cognom1>Vinent</cognom1>
+                <!-- Opcional -->
+                <cognom2>Sintes</cognom2>
+                <!-- Empra el codi creat abans a assignatures-->
+                <llista_assignatures >
+                    <REFassignatura codi_assignatura="lm"/>
+                    <REFassignatura codi_assignatura="ed"/>
+                </llista_assignatures>
+            </alumne>
+        </curs>
+    </cursos>
+</llistacursos>

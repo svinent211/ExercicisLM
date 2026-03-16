@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<persona 
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="persona.xsd">
+    <nom>Pepe</nom>
+    <edat>22</edat>
+    <data_naixement>2004-02-28</data_naixement>
+</persona>

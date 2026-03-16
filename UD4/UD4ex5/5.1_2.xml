@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<comanda id="P02"
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="5.1.xsd">
+    <client>
+        <nom>Maria</nom>
+        <telefon>600123123</telefon>
+    </client>
+    <linia numero="1">
+        <article>Monitor</article>
+        <quantitat>1</quantitat>
+        <preu_unitari>150</preu_unitari>
+    </linia>
+</comanda>

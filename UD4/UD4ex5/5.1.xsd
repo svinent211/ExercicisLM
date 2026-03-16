@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="comanda">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="client">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nom" type="xs:string"/>
+                            <xs:choice minOccurs="1" maxOccurs="1">
+                                <xs:element name="email" type="email"/>
+                                <xs:element name="telefon" type="telefon"/>
+                            </xs:choice>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="linia" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="article" type="xs:string"/>
+                            <xs:element name="quantitat" type="xs:positiveInteger"/>
+                            <xs:element name="preu_unitari" type="preu">
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="numero" type="xs:positiveInteger"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:ID"/>
+        </xs:complexType>
+    </xs:element>
+
+    
+    <xs:simpleType name="email">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="telefon">
+        <xs:restriction base="xs:string">
+            <xs:length value="9"></xs:length>
+            <xs:pattern value="[0-9]{9}"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="preu">
+        <xs:restriction base="xs:decimal">
+            <xs:fractionDigits value="2"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+</xs:schema>

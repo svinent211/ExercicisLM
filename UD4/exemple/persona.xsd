@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="persona">
+        <xs:complexType>
+            <xs:sequence><!-- all / choice -->
+                <xs:element name="nom" type="xs:string"/>
+                <xs:element name="edat" type="xs:integer" minOccurs="0"  maxOccurs="unbounded"/><!-- minOccurs="0" quiere decir opcional -->
+                <xs:element name="data_naixement" type="xs:date"/>
+                <!-- Nomes accepta YYYY-MM-DD -->
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

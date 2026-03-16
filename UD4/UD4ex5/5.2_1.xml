@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vehicles
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="5.2.xsd">
+    <vehicle matricula="1234ABC" tipus="cotxe">
+        <marca>Toyota</marca>
+        <any>2020</any>
+        <combustible>gasolina</combustible>
+    </vehicle>
+    <vehicle matricula="5678DEF" tipus="bicicleta">
+        <marca>Orbea</marca>
+        <any>2022</any>
+    </vehicle>
+</vehicles>

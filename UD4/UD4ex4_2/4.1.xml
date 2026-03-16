@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura 
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="4.1.xsd">
+    <capcalera>
+        <capcalera_id>S</capcalera_id>
+        <data>
+            <dia>1</dia>
+            <mes>3</mes>
+            <any>2026</any>
+        </data>
+        <client>
+            <nom_fiscal>IES Joan Ramis i Ramis</nom_fiscal>
+            <!-- No ha fet falta posar nom_comercial perque és opcional-->
+            <nom_comercial>IES Joan Ramis i Ramis</nom_comercial>
+            <NIF>X09363693</NIF>
+        </client>
+        <proveidor>
+            <nom_fiscal>Planeta</nom_fiscal>
+            <!-- No ha fet falta posar nom_comercial perque és opcional-->
+            <NIF>X11363653</NIF>
+        </proveidor>
+    </capcalera>
+    <linea article_ref="A1" id="L1"> 
+        <article id_article="A1" tipus_iva="21">
+            <descripcio_producte>Don Quijote de la Mancha</descripcio_producte>
+            <preu_sense_iva>20</preu_sense_iva>
+            <preu_amb_iva>24.2</preu_amb_iva>
+        </article>
+        <unitats>10</unitats>
+        <import_total>242</import_total>
+    </linea>
+    <linea article_ref="A2" id="L2">
+        <article id_article="A2" tipus_iva="21">
+            <descripcio_producte>El secret del meu turbant</descripcio_producte>
+            <preu_sense_iva>15</preu_sense_iva>
+            <preu_amb_iva>18.15</preu_amb_iva>
+        </article>
+        <unitats>20</unitats>
+        <import_total>363</import_total>
+    </linea>
+    <resum_total>
+        <subtotal_4>0</subtotal_4>
+        <subtotal_10>0</subtotal_10>
+        <subtotal_21>0</subtotal_21>
+        <total_sense_iva>500</total_sense_iva>
+        <total_amb_iva>605</total_amb_iva>
+    </resum_total>
+</factura>

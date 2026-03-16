@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="factura">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="capcalera">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="capcalera_id" type="xs:NMTOKEN"/>
+                            <xs:element name="data">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="dia">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:positiveInteger">
+                                                    <xs:minInclusive value="1"></xs:minInclusive>
+                                                    <xs:maxInclusive value="31"></xs:maxInclusive>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="mes">
+                                            <xs:simpleType>
+                                                <xs:restriction base="xs:positiveInteger">
+                                                    <xs:minInclusive value="1"></xs:minInclusive>
+                                                    <xs:maxInclusive value="12"></xs:maxInclusive>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        <xs:element name="any" type="xs:positiveInteger"></xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name="client" type="dades_type"/>
+
+                            <xs:element name="proveidor" type="dades_type"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="linea" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="article">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="descripcio_producte" type="xs:string"/>
+                                        <xs:element name="preu_sense_iva" type="xs:double"/>
+                                        <xs:element name="preu_amb_iva" type="xs:double"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="id_article" type="xs:ID" use="required"/>
+                                    <xs:attribute name="tipus_iva" type="tipus_iva_type" use="required"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="unitats" type="xs:integer"/>
+                            <xs:element name="import_total" type="xs:double"/>
+                        </xs:sequence>
+                        <!-- Atributs -->
+                         <xs:attribute name="id" type="xs:ID" use="required"/>
+                         <xs:attribute name="article_ref" type="xs:IDREF" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="resum_total">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="subtotal_4" type="xs:double"/>
+                            <xs:element name="subtotal_10" type="xs:double"/>
+                            <xs:element name="subtotal_21" type="xs:double"/>
+                            <xs:element name="total_sense_iva" type="xs:double"/>
+                            <xs:element name="total_amb_iva" type="xs:double"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+            <xs:complexType name="dades_type">
+                <xs:sequence>
+                    <xs:element name="nom_fiscal" type="xs:string"/>
+                    <xs:element name="nom_comercial" type="xs:string" minOccurs="0"/>
+                    <xs:element name="NIF" type="xs:NMTOKEN" />
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:simpleType name="tipus_iva_type">
+                <xs:restriction base="xs:positiveInteger">
+                    <xs:enumeration value="4"></xs:enumeration>
+                    <xs:enumeration value="10"></xs:enumeration>
+                    <xs:enumeration value="21"></xs:enumeration>
+                </xs:restriction>
+            </xs:simpleType>
+</xs:schema>

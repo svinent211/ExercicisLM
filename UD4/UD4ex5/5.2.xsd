@@ -11,24 +11,27 @@
                             <xs:element name="any" type="anyType"/>
                             <xs:element name="combustible" type="combustibleType" minOccurs="0" maxOccurs="1"/>
                         </xs:all>
-                        <xs:attribute name="matricula" type="matriculaType"/>
+                        <xs:attribute name="matricula" use="required" type="matriculaType"/>
                         <xs:attribute name="tipus" type="tipusVehicle"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
     <xs:simpleType name="anyType">
         <xs:restriction base="xs:positiveInteger">
             <xs:minInclusive value="1900"></xs:minInclusive>
             <xs:maxInclusive value="2100"></xs:maxInclusive>
         </xs:restriction>
     </xs:simpleType>
+
     <xs:simpleType name="matriculaType">
         <xs:restriction base="xs:string">
             <xs:pattern value="[0-9]{4}[A-Z]{3}"></xs:pattern>
         </xs:restriction>
     </xs:simpleType>
+
     <xs:simpleType name="tipusVehicle">
         <xs:restriction base="xs:string">
             <xs:enumeration value="cotxe"/>
@@ -36,6 +39,7 @@
             <xs:enumeration value="bicicleta"/>
         </xs:restriction>
     </xs:simpleType>
+    
     <xs:simpleType name="combustibleType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="gasolina"/>
@@ -43,4 +47,5 @@
             <xs:enumeration value="electric"/>
         </xs:restriction>
     </xs:simpleType>
+
 </xs:schema>

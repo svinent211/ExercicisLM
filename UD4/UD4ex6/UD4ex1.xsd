@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="concesionario">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element name="modelo">
+                    <xs:complexType mixed="true">
+                        <xs:choice maxOccurs="unbounded" minOccurs="0">
+                            <xs:element name="motor" ><!-- No se porque hace falta el mixed pero no funciona sin el-->
+                                <xs:complexType mixed="true">
+                                    <xs:attribute name="modelos_relacionados" type="xs:IDREFS"/>
+                                </xs:complexType>
+                            </xs:element>
+                            <xs:element name="potencia" type="xs:positiveInteger"/>
+                            <xs:element name="consumo_medio">
+                                <xs:complexType mixed="true"> <!-- No se porque hace falta el mixed pero no funciona sin el-->
+                                    <xs:attribute name="velocidad_km" type="xs:positiveInteger" use="required"></xs:attribute>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:choice>
+                        <xs:attribute name="id" type="xs:ID"/>
+                        <xs:attribute name="modelos_relacionados" type="xs:IDREFS"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<concesionario
+xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+xs:noNamespaceSchemaLocation="UD4ex1.xsd">
+    <modelo id="Modelo323">No disponible</modelo>
+    <modelo id="Modelo444" modelos_relacionados="Modelo333
+    Modelo777">Este modelo tiene un <motor modelos_relacionados="Modelo333">1.298cc 19v. de cuatro cilindros</motor> que desarrolla una potencia de <potencia>177</potencia> CV. Dispone de cambio manual ... el consumo medio de este monovolumen es <consumo_medio
+            velocidad_km="L">66</consumo_medio> a los 100 km. El precio base es de 6.225.000.</modelo>
+    <modelo id="Modelo777">No disponible</modelo>
+    <modelo id="Modelo544" modelos_relacionados="Modelo444">Este modelo tiene un <motor
+            modelos_relacionados="Modelo444">1.400cc 16v. de cuatro
+            cilindros</motor> con <potencia>200</potencia> CV. Dispone de cambio manual ... El precio base es de 4.250.000.</modelo>
+</concesionario>

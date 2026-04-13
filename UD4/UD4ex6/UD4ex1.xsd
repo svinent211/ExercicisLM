@@ -5,24 +5,30 @@
             <xs:sequence maxOccurs="unbounded">
                 <xs:element name="modelo">
                     <xs:complexType mixed="true">
-                        <xs:choice maxOccurs="unbounded" minOccurs="0">
-                            <xs:element name="motor" ><!-- No se porque hace falta el mixed pero no funciona sin el-->
-                                <xs:complexType mixed="true">
-                                    <xs:attribute name="modelos_relacionados" type="xs:IDREFS"/>
-                                </xs:complexType>
-                            </xs:element>
+                        <xs:sequence maxOccurs="1" minOccurs="0">
+                            <xs:element name="motor" type="motorType" /><!-- No se porque hace falta el mixed pero no funciona sin el-->
                             <xs:element name="potencia" type="xs:positiveInteger"/>
-                            <xs:element name="consumo_medio">
-                                <xs:complexType mixed="true"> <!-- No se porque hace falta el mixed pero no funciona sin el-->
-                                    <xs:attribute name="velocidad_km" type="xs:positiveInteger" use="required"></xs:attribute>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:choice>
+                            <xs:element name="consumo_medio" type="consumoType"/>
+                        </xs:sequence>
                         <xs:attribute name="id" type="xs:ID"/>
-                        <xs:attribute name="modelos_relacionados" type="xs:IDREFS"/>
+                        <xs:attribute name="modelos_relacionados" type="xs:IDREFS" use="optional"/>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+    <xs:complexType name="motorType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="modelos_relacionados" type="xs:IDREFS" use="optional"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="consumoType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="velocidad_km" type="xs:positiveInteger" use="required"></xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
 </xs:schema>

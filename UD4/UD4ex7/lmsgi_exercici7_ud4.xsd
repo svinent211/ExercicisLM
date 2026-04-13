@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="cooperativa">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="granja" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="productor" minOccurs="1" maxOccurs="unbounded" type="productorType"/>
+                            <xs:element name="animales" type="animalesType" minOccurs="1" maxOccurs="1"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+    <xs:complexType name="productorType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="id" type="xs:ID" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="animalesType">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element name="gato" minOccurs="0" maxOccurs="2" type="gatoperroType"/>
+                <xs:element name="perro" minOccurs="0" maxOccurs="1" type="gatoperroType"/>
+            </xs:choice>
+            <xs:choice> 
+                <xs:sequence>
+                    <xs:element name="cerdo" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:sequence>
+                    <xs:element name="cerdo" minOccurs="1" maxOccurs="1" type="cerdoCantidadType"/>
+                </xs:sequence>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="gatoperroType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="decompania" type="xs:boolean" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+    <xs:complexType name="cerdoCantidadType">
+        <xs:attribute name="cantidad" type="xs:positiveInteger" use="required"/>
+    </xs:complexType>
+</xs:schema>

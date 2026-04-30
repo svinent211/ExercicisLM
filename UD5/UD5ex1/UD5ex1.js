@@ -184,8 +184,9 @@ const afegirProducte = (nom, quantitat, preu) => {
         preu
     })
 };
-const actualitzarStock = (posicio, quantitatt) => {
-    productes[posicio].quantitat = productes[posicio].quantitat - quantitatt;
+const actualitzarStock = (nom, novaQuantitat) => {
+    const producte = productes.find(p => p.nom === nom); //Referencia
+    producte.quantitat = novaQuantitat;
 };
 const calcularTotal = () => {
     let total = 0;
@@ -199,6 +200,6 @@ afegirProducte("Disco", 30, 300);
 afegirProducte("Pendrive", 50, 100);
 afegirProducte("Raton", 60, 50);
 
-actualitzarStock(0, 1);
-
+actualitzarStock("Disco", 299);
+console.log(productes);
 console.log(`Total inventari: ${calcularTotal()}`); 

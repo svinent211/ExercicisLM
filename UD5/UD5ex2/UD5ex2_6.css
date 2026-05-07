@@ -1,0 +1,16 @@
+li.completed {
+    background-color: lightgreen;
+}
+
+.display-none {
+    display: none;
+}
+
+div {
+    margin-top: 10px;
+}
+
+button.delete {
+    margin-left: 15px;
+}
+

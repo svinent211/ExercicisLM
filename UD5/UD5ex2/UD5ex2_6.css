@@ -1,5 +1,7 @@
 li.completed {
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
+    text-decoration: line-through;
+    color: grey;
 }
 
 .display-none {
@@ -14,3 +16,6 @@ button.delete {
     margin-left: 15px;
 }
 
+.errorMessages {
+    color: red;
+}
